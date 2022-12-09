@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Counter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Tip Calculator Project -->
+    <section class="tipCalculator">
+      <p>Bill total</p>
+      <div class="billTotal">
+        <span>$</span
+        ><input
+          onkeyup="calculateBill()"
+          type="text"
+          id="billInput"
+          placeholder="0.00"
+        />
+      </div>
+      <p>Tip</p>
+      <div class="tip">
+        <span>%</span
+        ><input
+          onkeyup="calculateBill()"
+          type="text"
+          id="tipInput"
+          placeholder="0.00"
+        />
+      </div>
+      <div class="calculationSec">
+        <div class="people">
+          <p>People:</p>
+          <div class="peopleDiv">
+            <button id="plusSign" onclick="increase()">+</button>
+            <span id="peopleNumber">1</span>
+            <button id="minusSign" onclick="decrease()">-</button>
+            <button id="clearBtn">clear</button>
+          </div>
+        </div>
+        <div class="totalCount">
+          <p>Total per <span id="persons">Person</span>:</p>
+          <div class="totalCountDiv">$ <span id="total"></span></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
